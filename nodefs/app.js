@@ -18,18 +18,23 @@ fs.rename(oldPath, newPath, function (err) {
   if (err) throw err
   console.log('Successfully renamed - AKA moved!')
 })
+
 */
 
 
-
 //Copiar archivos
-
 /*
+
 fs.copyFile('./origen/file.txt', './destinoCopias/file.txt', (err) => {
     if (err) throw err;
     console.log('source.txt was copied to destination.txt');
   });
-  */
+
+fs.copyFile('./origen/file.txt', './destino/file.txt', (err) => {
+  if (err) throw err;
+  console.log('source.txt was copied to destination.txt');
+});
+*/
 
 
   
@@ -50,7 +55,9 @@ fs.rename( './origen/file.txt', './origen/fileRenamed', (err) => {
   if (!fs.existsSync('./nuevaCarpeta')){
     fs.mkdirSync('./nuevaCarpeta');
 }
+
 */
+
 
 
 
@@ -96,4 +103,18 @@ const removeDir = function(path) {
 pathToDir = './nuevaCarpeta'
 
 removeDir(pathToDir)
+*/
+
+//Listar archivos y filtrar
+
+/*
+const testFolder = './nuevaCarpeta/';
+var path = require('path');
+fs.readdir(testFolder, (err, files) => {
+  files.forEach(file => {
+    if(path.extname(file).toLowerCase() === '.txt'){
+      console.log(file);
+    }
+  });
+});
 */
